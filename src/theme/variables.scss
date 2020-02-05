@@ -34,12 +34,30 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:     #222,//#c5d7f5, //84BF41,
+  secondary:  #7f8c8d,//#32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  color2: rgba(84, 114, 109, 0.055),
+  color1: #4277BB ,
+  color3: rgba(1, 29, 54, 0.842),
 );
+
+
+$app-background: #83a4d4;  /* fallback for old browsers */
+$app-background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+$app-background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+$searchbar-md-input-background-color: transparent;// #ffecd2;//$searchbar-wp-background-color: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+$searchbar-md-input-border-radius:	4px;
+$searchbar-md-input-box-shadow:	0 2px 2px 0 rgba(0, 0, 0, .14), 0 2px ;
+$searchbar-md-input-line-height:	3rem;
+
+$background-color: transparent;
+$toolbar-background: transparent;
+
+$segment-button-wp-height:6px;
 
 
 // App iOS Variables

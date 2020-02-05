@@ -1,0 +1,29 @@
+<!--
+  Generated template for the ListPatternPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>listPattern</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <br><br>
+  <ion-grid>
+    <ion-row class="categories">    
+        <ion-col col-6 *ngFor="let pattern of listDP">
+            <p class="text-over-img"> 
+            <button ion-button icon-only clear (click)="SelectPattern(pattern.DPName)">
+              <ion-icon name="eye"></ion-icon> 
+              {{pattern.DPName}}              
+            </button>
+                                   
+            </p>               
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

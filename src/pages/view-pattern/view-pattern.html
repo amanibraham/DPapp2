@@ -1,0 +1,87 @@
+<!--
+  Generated template for the ViewPatternPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>View Pattern</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-segment [(ngModel)]="patternInfo">
+        <ion-segment-button value="description">
+            <ion-icon name="list-box"></ion-icon>
+            <ion-badge item-right >Description</ion-badge>
+        </ion-segment-button>
+        <ion-segment-button value="diagram">
+            <ion-icon name="logo-codepen"></ion-icon>
+            <ion-badge item-right >Diagram</ion-badge>
+        </ion-segment-button>
+        <ion-segment-button value="display">
+            <ion-icon name="analytics"></ion-icon>
+            <ion-badge item-right >Display</ion-badge>
+        </ion-segment-button>
+        <ion-segment-button value="srcCode">
+            <ion-icon name="code"></ion-icon>
+            <ion-badge item-right >Code</ion-badge>
+        </ion-segment-button>
+      </ion-segment>
+
+      <div [ngSwitch]="patternInfo">
+        <ion-list *ngSwitchCase="'description'">
+
+            
+    <ion-card>
+        <ion-list *ngFor="let pattern of DP">
+        <ion-item>
+            <ion-label color="secondary"> Pattern Name </ion-label>            
+            <ion-label> {{pattern.DPName}}</ion-label>           
+        </ion-item>  
+        <ion-item>
+            <ion-label color="secondary">Category </ion-label>            
+            <ion-label> {{pattern.Category}}</ion-label>           
+        </ion-item> 
+        <ion-item>
+            <ion-label color="secondary"> Group</ion-label>            
+            <ion-label>{{pattern.PatternGroup}}</ion-label>           
+        </ion-item>
+        <ion-item>
+            <ion-label color="secondary">  Problem  </ion-label>
+            <ion-label>{{pattern.Problem}}</ion-label>        
+        </ion-item>
+        <ion-item>
+            <ion-label color="secondary">  Condition </ion-label>
+            <ion-label>{{pattern.Condition}}</ion-label>            
+        </ion-item>
+        <ion-item>
+            <ion-label color="secondary"> Solution </ion-label>
+            <ion-label>{{pattern.Solution}}</ion-label>           
+        </ion-item>
+        </ion-list>        
+    </ion-card>
+    <div style="text-align:center;">
+        <button ion-button round icon-end color="color3">Extract<ion-icon name="download"></ion-icon></button>
+     </div>
+         
+    </ion-list>
+    <ion-list *ngSwitchCase="'diagram'">
+          diagram
+    </ion-list>
+    <ion-list *ngSwitchCase="'display'">
+            display
+    </ion-list>
+    <ion-list *ngSwitchCase="'srcCode'">
+            srcCode
+    </ion-list>
+    </div>    
+
+
+
+
+
+</ion-content>

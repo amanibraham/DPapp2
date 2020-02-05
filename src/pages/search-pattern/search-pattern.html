@@ -1,0 +1,117 @@
+<!--
+  Generated template for the SearchPatternPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+<ion-header>
+  <ion-navbar>
+    <ion-title>searchPattern</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>
+-->
+<ion-content padding>
+  <form [formGroup]="PatternForm" (ngSubmit)="onSubmit(PatternForm.value)">
+    
+    <ion-card>
+      <ion-card-header>        
+        <span style="color: #4277BB">Problem Description</span>
+        <ion-icon style="float: left;" name="filing"></ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating" style="color: #222">Problem Text</ion-label>
+            <ion-textarea rows="2" maxLength="1000" formControlName='description1'></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" style="color: #222">Application Purpose</ion-label>
+            <ion-textarea rows="2" maxLength="1000" formControlName='description2'></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>  
+    
+    <ion-card>
+      <ion-card-header>        
+        <span style="color: #4277BB">User Characteristic Issue </span>
+        <ion-icon style="float: left;" name="person"></ion-icon>
+      </ion-card-header>
+      <ion-card-content>        
+        <ion-list color="color1">    
+            <ion-item>
+              <ion-label position="floating" style="color: #222">Disability</ion-label>
+              <ion-select  formControlName='disability'>
+                <ion-option value='none'>None</ion-option>
+                <ion-option value='lowVision'>Low Vision </ion-option>
+                <ion-option value='colorBlindness'>Color Blindness</ion-option>        
+                <ion-option value='cognitiveDisability'>Cognitive Disability</ion-option>
+                <ion-option value='motorDisability'>Motor Disability</ion-option>
+              </ion-select>
+            </ion-item>
+        
+            <ion-item>
+                <ion-label position="floating" style="color: #222">Interest</ion-label>
+                <ion-select  formControlName='interest'>
+                  <ion-option value='none'>None</ion-option>
+                  <ion-option value='interest1'>interest 1</ion-option>
+                  <ion-option value='interest2'>interest 2</ion-option>        
+                  <ion-option value='interest3'>interest 3</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #222">Task</ion-label>
+                 <ion-select  formControlName='task'>
+                    <ion-option value='Task1'> Sign In</ion-option>
+                    <ion-option value='Task2'> Sign Up </ion-option> 
+                    <ion-option value='Task3'> Sarch Interest </ion-option> 
+
+                  </ion-select>       
+            </ion-item>
+          </ion-list>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>        
+      <span style="color: #4277BB">Design Interaction Issue </span>
+      <ion-icon style="float: left;" name="options"></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+        
+      <ion-list radio-group  formControlName='interactionIssue'>
+            <ion-item>
+                <ion-label position="floating" style="color: #222">Data</ion-label>
+                <ion-radio value="data"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #222">Font Size</ion-label>
+                <ion-radio value="fontSize"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #222">Font Color</ion-label>
+                <ion-radio value="fontColor"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #222">Interface Element</ion-label>
+                <ion-radio value="interfaceElement"></ion-radio>
+            </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+        
+  <div  style="text-align:center;" >
+    <button ion-button small round type='submit'  icon-end color="color3"> Search  <ion-icon name="search"></ion-icon></button>
+  </div>
+           
+  </form> 
+
+
+
+</ion-content>

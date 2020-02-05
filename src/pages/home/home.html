@@ -1,14 +1,100 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Search design patterns
     </ion-title>
   </ion-navbar>
+
+  <ion-toolbar>
+      <ion-list-header>Search Design Patterns</ion-list-header>
+  </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <form [formGroup]="PatternForm" (ngSubmit)="onSubmit(PatternForm.value)">
+      
+      
+       <!-- 
+          <ion-item-divider color="color1">
+          User Characteristic Issue
+        </ion-item-divider>
+       --> 
+      <ion-card>
+        <ion-list color="color1">
+          <ion-list-header color="color3">
+              User Characteristic Issue             
+          </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Disability</ion-label>
+              <ion-select  formControlName='disability'>
+                <ion-option value='none'>None</ion-option>
+                <ion-option value='lowVision'>Low Vision </ion-option>
+                <ion-option value='colorBlindness'>Color Blindness</ion-option>        
+                <ion-option value='cognitiveDisability'>Cognitive Disability</ion-option>
+                <ion-option value='motorDisability'>Motor Disability</ion-option>
+              </ion-select>
+            </ion-item>
+        
+            <ion-item>
+                <ion-label>Interest</ion-label>
+                <ion-select  formControlName='interest'>
+                  <ion-option value='none'>None</ion-option>
+                  <ion-option value='interest1'>interest 1</ion-option>
+                  <ion-option value='interest2'>interest 2</ion-option>        
+                  <ion-option value='interest3'>interest 3</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Task</ion-label>
+                 <ion-select  formControlName='task'>
+                    <ion-option value='Task1'> Sign In</ion-option>
+                    <ion-option value='Task2'> Sign Up </ion-option> 
+                    <ion-option value='Task3'> Sarch Interest </ion-option> 
+
+                  </ion-select>       
+            </ion-item>
+          </ion-list>
+
+        </ion-card>
+
+        <ion-card>
+
+
+          <ion-list radio-group  formControlName='interactionIssue'>
+              <ion-list-header color="color3">
+                  Design Interaction Issue
+              </ion-list-header>
+            
+            <ion-item>
+                <ion-label>Data</ion-label>
+                <ion-radio value="data"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Font Size</ion-label>
+                <ion-radio value="fontSize"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Font Color</ion-label>
+                <ion-radio value="fontColor"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Interface Element</ion-label>
+                <ion-radio value="interfaceElement"></ion-radio>
+            </ion-item>
+
+          </ion-list>
+        
+        </ion-card>
+        
+        <ion-card>
+            <button ion-button block fill  type='submit'  icon-end color="color3"> Search  <ion-icon name="search"></ion-icon></button>
+        </ion-card>
+           
+      </form> 
+
+
+
 </ion-content>
